@@ -1,0 +1,309 @@
+# SmartVision AI: Intelligent Multi-Class Object Recognition System
+
+## 1. Project Overview
+
+SmartVision AI is a deep learning-based computer vision system designed to perform image classification and object detection. The project combines transfer learning models for classification and YOLOv8 for object detection to recognize multiple object categories from images.
+
+The system supports 25 selected object classes derived from the COCO dataset and provides an interactive web application built using Streamlit. Users can upload images, classify objects, detect multiple objects within images, and view model performance metrics.
+
+---
+
+## 2. Problem Statement
+
+Object recognition is one of the most important tasks in computer vision. Traditional image processing techniques often fail to generalize across different environments and object variations.
+
+The objective of this project is to develop an intelligent system capable of:
+
+* Classifying images into predefined categories.
+* Detecting and localizing objects within images.
+* Comparing multiple deep learning architectures.
+* Deploying an interactive web application for end users.
+
+---
+
+## 3. Dataset Description
+
+The dataset was created using selected categories from the COCO (Common Objects in Context) dataset.
+
+### Selected Classes
+
+* Airplane
+* Bed
+* Bench
+* Bicycle
+* Bird
+* Bottle
+* Bowl
+* Bus
+* Cake
+* Car
+* Cat
+* Chair
+* Couch
+* Cow
+* Cup
+* Dog
+* Elephant
+* Horse
+* Motorcycle
+* Person
+* Pizza
+* Potted Plant
+* Stop Sign
+* Traffic Light
+* Truck
+
+### Dataset Statistics
+
+#### Classification Dataset
+
+* Training Images: 1750
+* Validation Images: 375
+* Test Images: 375
+* Total Images: 2500
+
+#### Detection Dataset
+
+* Images: 2125
+* Labels: 2125
+* Objects: 21578
+
+---
+
+## 4. Dataset Preparation
+
+The dataset preparation pipeline was automated using Python and Jupyter Notebook.
+
+The following steps were performed:
+
+1. COCO annotations loading
+2. Category filtering
+3. Image extraction
+4. Image resizing
+5. Dataset splitting
+6. YOLO annotation generation
+7. Label validation and cleaning
+
+The final dataset was organized into:
+
+### Classification Structure
+
+classification/
+├── train/
+├── val/
+└── test/
+
+### Detection Structure
+
+detection/
+├── images/
+└── labels/
+
+---
+
+## 5. Exploratory Data Analysis (EDA)
+
+EDA was performed to understand dataset characteristics.
+
+### Key Findings
+
+* Dataset contains 25 object categories.
+* Class distribution is balanced.
+* Images are evenly distributed across train, validation, and test sets.
+* Detection dataset contains more than 21,000 object annotations.
+* Average objects per image: approximately 10.
+
+Visualization techniques included:
+
+* Class distribution charts
+* Image count analysis
+* Dataset summary statistics
+
+---
+
+## 6. Image Classification Models
+
+Transfer learning was used to leverage pretrained CNN architectures.
+
+### MobileNetV2
+
+MobileNetV2 is a lightweight CNN architecture optimized for efficiency and deployment on resource-constrained devices.
+
+Validation Accuracy: 40.27%
+
+### VGG16
+
+VGG16 is a deep convolutional neural network consisting of 16 layers.
+
+Validation Accuracy: 15.73%
+
+### ResNet50
+
+ResNet50 utilizes residual connections to enable deeper network training.
+
+Validation Accuracy: 8.80%
+
+### EfficientNetB0
+
+EfficientNetB0 scales network depth, width, and resolution efficiently.
+
+Validation Accuracy: 4.00%
+
+### Best Performing Classification Model
+
+MobileNetV2 achieved the highest validation accuracy and was selected for deployment.
+
+---
+
+## 7. Object Detection Using YOLOv8
+
+YOLOv8 was used for real-time object detection.
+
+### Training Configuration
+
+* Model: YOLOv8n
+* Input Size: 640 × 640
+* Dataset: Custom COCO subset
+* Framework: Ultralytics YOLO
+
+### Evaluation Metrics
+
+Precision: 0.453
+
+Recall: 0.429
+
+mAP50: 0.385
+
+mAP50-95: 0.162
+
+YOLO successfully detected multiple object categories and generated bounding boxes around identified objects.
+
+---
+
+## 8. Model Evaluation
+
+### Classification Comparison
+
+| Model          | Validation Accuracy |
+| -------------- | ------------------- |
+| MobileNetV2    | 40.27%              |
+| VGG16          | 15.73%              |
+| ResNet50       | 8.80%               |
+| EfficientNetB0 | 4.00%               |
+
+### Detection Performance
+
+| Metric    | Value |
+| --------- | ----- |
+| Precision | 0.453 |
+| Recall    | 0.429 |
+| mAP50     | 0.385 |
+| mAP50-95  | 0.162 |
+
+MobileNetV2 outperformed the other classification models, while YOLOv8 provided acceptable object detection performance.
+
+---
+
+## 9. Streamlit Web Application
+
+A multi-page Streamlit application was developed.
+
+### Features
+
+#### Home Page
+
+* Project overview
+* System description
+
+#### Image Classification
+
+* Upload image
+* MobileNetV2 prediction
+* Predicted class display
+
+#### Object Detection
+
+* Upload image
+* YOLOv8 inference
+* Bounding box visualization
+
+#### Model Performance
+
+* Classification metrics
+* YOLO evaluation metrics
+* Interactive charts
+
+#### About Page
+
+* Project details
+* Technologies used
+
+---
+
+## 10. Technologies Used
+
+### Programming Language
+
+* Python
+
+### Deep Learning Frameworks
+
+* TensorFlow
+* Keras
+* Ultralytics YOLO
+
+### Libraries
+
+* NumPy
+* Pandas
+* Matplotlib
+* OpenCV
+* PIL
+* Streamlit
+
+### Development Environment
+
+* Jupyter Notebook
+* Anaconda
+* VS Code
+
+---
+
+## 11. Challenges Faced
+
+* Limited hardware resources (8 GB RAM)
+* Long training times for deep learning models
+* YOLO label normalization issues
+* Model accuracy limitations due to dataset size
+* Deployment path and dependency management
+
+---
+
+## 12. Conclusion
+
+SmartVision AI successfully demonstrates the use of transfer learning and object detection techniques for intelligent image understanding.
+
+The project integrates image classification, object detection, model evaluation, and web deployment into a single system. MobileNetV2 achieved the best classification performance, while YOLOv8 provided object localization capabilities.
+
+Future improvements may include larger datasets, data augmentation, hyperparameter tuning, and deployment using cloud infrastructure.
+
+---
+
+## 13. Future Scope
+
+* Increase dataset size
+* Improve classification accuracy
+* Train larger YOLO models
+* Add video object detection
+* Implement real-time webcam detection
+* Deploy using cloud GPU infrastructure
+
+---
+
+### Author
+
+Swetha Dasari
+
+SmartVision AI Project
+
+2026
