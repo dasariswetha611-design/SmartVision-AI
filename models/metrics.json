@@ -1,0 +1,27 @@
+{
+  "classification_models": {
+    "MobileNetV2": {
+      "validation_accuracy": 0.4027,
+      "status": "Best classification model"
+    },
+    "VGG16": {
+      "validation_accuracy": 0.1573,
+      "status": "Trained successfully"
+    },
+    "ResNet50": {
+      "validation_accuracy": 0.0880,
+      "status": "Trained successfully but low accuracy"
+    },
+    "EfficientNetB0": {
+      "validation_accuracy": 0.0400,
+      "status": "Trained successfully but low accuracy"
+    }
+  },
+  "object_detection": {
+    "model": "YOLOv8n",
+    "precision": 0.453,
+    "recall": 0.429,
+    "map50": 0.385,
+    "map50_95": 0.162
+  }
+}
