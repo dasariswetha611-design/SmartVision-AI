@@ -105,8 +105,6 @@ SmartVision_AI/
 
 │ └── best.pt
 
-├── screenshots/
-
 ├── requirements.txt
 
 ├── README.md
