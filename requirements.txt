@@ -1,3 +1,4 @@
+streamlit
 tensorflow
 numpy
 pandas
@@ -6,5 +7,4 @@ opencv-python
 Pillow
 ultralytics
 scikit-learn
-datasets
 tqdm
