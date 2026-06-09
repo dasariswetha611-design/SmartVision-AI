@@ -2,42 +2,78 @@
 
 ## Intelligent Multi-Class Object Recognition System
 
-SmartVision AI is a Deep Learning based computer vision application that performs both Image Classification and Object Detection using state-of-the-art models.
+SmartVision AI is a Deep Learning-based Computer Vision application that performs both **Image Classification** and **Object Detection** using state-of-the-art Deep Learning models.
 
 The project combines Transfer Learning models for image classification and YOLOv8 for object detection, deployed through an interactive Streamlit web application.
 
 ---
 
-## Project Features
+## Live Demo
 
-* Image Classification using:
+### Hugging Face Deployment
+
+Paste your Hugging Face URL here:
+
+```text
+https://huggingface.co/spaces/Dasari12345/smartvision-ai
+```
+
+### GitHub Repository
+
+Paste your GitHub repository URL here:
+
+```text
+https://github.com/dasariswetha611-design/SmartVision-AI
+```
+
+---
+
+## Project Deliverables
+
+* Dataset Preparation Pipeline
+* Exploratory Data Analysis (EDA)
+* Image Classification Models
 
   * MobileNetV2
   * VGG16
   * ResNet50
   * EfficientNetB0
+* YOLOv8 Object Detection
+* Model Evaluation Dashboard
+* Streamlit Web Application
+* Hugging Face Deployment
+* Technical Report
 
-* Object Detection using:
+---
 
-  * YOLOv8
+## Project Features
 
-* Interactive Streamlit Dashboard
+### Image Classification
 
-* Model Performance Visualization
+* MobileNetV2
+* VGG16
+* ResNet50
+* EfficientNetB0
 
-* Upload and Predict Images
+### Object Detection
 
-* Bounding Box Visualization
+* YOLOv8
+
+### Dashboard Features
+
+* Image Upload
+* Classification Prediction
+* Object Detection
+* Performance Metrics Visualization
+* Interactive Streamlit Interface
 
 ---
 
 ## Dataset
 
-The project uses images from the COCO Dataset.
+The project uses a subset of the COCO Dataset containing 25 object categories.
 
-Number of Classes: 25
-
-Classes include:
+### Selected Classes
 
 * airplane
 * bed
@@ -65,51 +101,72 @@ Classes include:
 * traffic light
 * truck
 
+### Dataset Statistics
+
+| Dataset Type      | Count |
+| ----------------- | ----- |
+| Training Images   | 1750  |
+| Validation Images | 375   |
+| Test Images       | 375   |
+| Total Images      | 2500  |
+
+---
+
+## Project Architecture
+
+Dataset Preparation
+
+↓
+
+Exploratory Data Analysis
+
+↓
+
+Transfer Learning Models
+
+↓
+
+YOLOv8 Object Detection
+
+↓
+
+Model Evaluation
+
+↓
+
+Streamlit Deployment
+
+↓
+
+Hugging Face Space
+
 ---
 
 ## Project Structure
 
+```text
 SmartVision_AI/
 
-├── app/
-
-│ └── app.py
-
-├── notebooks/
-
-│ ├── 01_dataset_preparation.ipynb
-
-│ ├── 02_EDA.ipynb
-
-│ ├── 03_Classification_Models.ipynb
-
-│ ├── 04_YOLO_Training.ipynb
-
-│ ├── 05_Model_Evaluation.ipynb
-
-│ └── 06_Final_Demo.ipynb
-
-├── models/
-
-│ ├── mobilenetv2.keras
-
-│ ├── vgg16.keras
-
-│ ├── resnet50.keras
-
-│ ├── efficientnetb0.keras
-
-│ └── metrics.json
-
-├── yolo/
-
-│ └── best.pt
-
+├── app.py
+├── README.md
 ├── requirements.txt
 
-├── README.md
-
+├── notebooks/
+│
+├── models/
+│   ├── mobilenetv2.keras
+│   ├── vgg16.keras
+│   ├── resnet50.keras
+│   ├── efficientnetb0.keras
+│   └── metrics.json
+│
+├── weights/
+│   └── best.pt
+│
+├── screenshots/
+│
 └── SmartVision_AI_Report.pdf
+```
 
 ---
 
@@ -122,7 +179,11 @@ SmartVision_AI/
 | ResNet50       | 8.80%               |
 | EfficientNetB0 | 4.00%               |
 
-MobileNetV2 achieved the best performance among the classification models and was selected for deployment.
+### Best Classification Model
+
+**MobileNetV2**
+
+Validation Accuracy: **40.27%**
 
 ---
 
@@ -137,63 +198,93 @@ MobileNetV2 achieved the best performance among the classification models and wa
 
 ---
 
-## Installation
-
-Clone the repository:
-
-git clone https://github.com/yourusername/SmartVision-AI.git
-
-Move to project folder:
-
-cd SmartVision-AI
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run Streamlit application:
-
-streamlit run app.py
-
----
-
-## Streamlit Application
-
-The application contains:
-
-1. Home Page
-2. Image Classification
-3. Object Detection
-4. Model Performance Dashboard
-5. About Page
-
----
-
 ## Technologies Used
 
+### Programming Language
+
 * Python
-* TensorFlow / Keras
+
+### Deep Learning Frameworks
+
+* TensorFlow
+* Keras
 * YOLOv8
-* OpenCV
+
+### Libraries
+
 * NumPy
 * Pandas
 * Matplotlib
+* OpenCV
+* Pillow
 * Streamlit
+
+### Development Environment
+
+* Jupyter Notebook
+* Anaconda
+* Hugging Face Spaces
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/dasariswetha611-design/SmartVision-AI.git
+```
+
+### Move to Project Folder
+
+```bash
+cd SmartVision-AI
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Streamlit Application
+
+```bash
+streamlit run app.py
+```
 
 ---
 
 ## Future Improvements
 
-* Increase classification accuracy using larger datasets
-* Hyperparameter tuning
-* Ensemble learning approaches
-* Real-time webcam detection
-* Cloud deployment optimization
+* Improve Classification Accuracy
+* Larger Training Dataset
+* Advanced Data Augmentation
+* Hyperparameter Optimization
+* Real-Time Webcam Detection
+* Video Object Detection
+* Cloud-Based GPU Deployment
+
+---
+
+## Project Status
+
+Completed
+
+* Dataset Preparation
+* EDA
+* Classification Models
+* YOLOv8 Detection
+* Streamlit Application
+* Hugging Face Deployment
+* Technical Documentation
 
 ---
 
 ## Author
 
-Swetha Dasari
+### Swetha Dasari
 
-Project developed as part of the AIML Capstone Project.
+AIML Capstone Project
+
+SmartVision AI – Intelligent Multi-Class Object Recognition System
